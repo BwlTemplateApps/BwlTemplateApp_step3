@@ -1,0 +1,15 @@
+<h1>Account Information</h1>
+<p>Request status code: {{statusDesc status}}</p>
+<p>Auth result: {{dat.result}}</p>
+<h2>Accounts:</h2>
+  {{#if dat.accounts}}
+    <ul>
+      {{#each dat.accounts}}
+      <li>{{decodeURI this}}</li>
+      {{/each}}
+  	</ul>
+  {{else}}
+    <p>No accounts</p>
+  {{/if}}
+<h2>Helper Example:</h2>
+  {{count 10}}
